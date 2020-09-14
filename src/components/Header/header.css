@@ -5,21 +5,25 @@
     justify-content: space-evenly;
     background-color: #1976d2;
 }
+
 .title {
     float: left;
     font-size: 25px;
     font-weight: 500;
 }
+
 .search-field {
     margin: 0 auto;
     width: 400px;
 }
+
 .search-input {
     border-radius: 5px;
     border: none;
     height: 30px;
     width: 250px;
 }
+
 .button {
     margin-left: 10px;
     border-radius: 5px;
@@ -27,6 +31,7 @@
     border: none;
 
 }
+
 .button:active {
     background-color: #7db5ec;
 }

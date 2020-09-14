@@ -8,7 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 
 export default function FormDialog(props) {
 
-    const { open, handleClose,  title, desc, date ,handleTitle, handleDesc, handleDate, save, variant } = props
+    const {open, handleClose, title, desc, date, handleTitle, handleDesc, handleDate, save, variant} = props
 
     return (
         <div>

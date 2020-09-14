@@ -1,19 +1,20 @@
-*{
-  outline: none;
+* {
+    outline: none;
 }
 
 .settings {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.green {
-  color: green;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.main-cards{
-  display: flex;
-  flex-wrap: wrap;
-  width: 65%;
-  margin: 0 auto;
+.green {
+    color: green;
+}
+
+.main-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    margin: 0 auto;
 }

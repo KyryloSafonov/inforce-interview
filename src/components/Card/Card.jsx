@@ -11,7 +11,6 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 
 
-
 export default function OutlinedCard(props) {
 
     const {
@@ -42,7 +41,7 @@ export default function OutlinedCard(props) {
     return (
         <Card className={`root ${className}`} variant="outlined">
             {
-                cardVariant==='uncontrolled' ? //варіант картки
+                cardVariant === 'uncontrolled' ? //варіант картки
                     ''
                     :
                     <div className='navigate'>
@@ -70,10 +69,10 @@ export default function OutlinedCard(props) {
                 </Typography>
                 <div className='more'>
                     {
-                        cardVariant==='uncontrolled' ?
+                        cardVariant === 'uncontrolled' ?
                             ''
                             :
-                            <Button  onClick={()=> {
+                            <Button onClick={() => {
                                 setOpenMore(true)
                                 setObj(el)
                                 searchSimilar(el)
@@ -82,7 +81,7 @@ export default function OutlinedCard(props) {
                             </Button>
                     }
 
-                    <Typography  className='date' variant="body2" component="p">
+                    <Typography className='date' variant="body2" component="p">
                         {date}
                     </Typography>
                 </div>
