@@ -21,9 +21,11 @@ export default function OutlinedCard(props) {
         setAnnoun,
         date,
         desc,
+        imageURL,
         id,
         setDate,
         setDesc,
+        setImageURL,
         setId,
         setTitle,
         title,
@@ -46,6 +48,7 @@ export default function OutlinedCard(props) {
                     :
                     <div className='navigate'>
                         <IconButton className={openSettings ? '' : 'd-none'} onClick={() => {
+                            setImageURL(el.imageURL)
                             setTitle(el.title)
                             setDate(el.date)
                             setDesc(el.desc)
@@ -61,6 +64,7 @@ export default function OutlinedCard(props) {
             }
 
             <CardContent>
+                <img src={imageURL} alt=""/>
                 <Typography className='card-title' gutterBottom>
                     {title}
                 </Typography>

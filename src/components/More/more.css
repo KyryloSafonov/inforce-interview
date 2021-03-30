@@ -25,3 +25,18 @@
     display: flex;
     justify-content: space-between;
 }
+
+.comments{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.commentsList:nth-child(add){
+    background-color: #7db5ec;
+}
+
+.commentsList{
+    font-size: 18px ;
+}
+
+

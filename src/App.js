@@ -21,12 +21,14 @@ function App() {
     const [openMore, setOpenMore] = useState(false);
     const [obj, setObj] = useState([]);
     const [similar, setSimilar] = useState([]);
+    const [imageURL, setImageURL] = useState('')
 
     const openDialog = (variant) => {
         setVariant(variant)
         if (variant === 'create') {
             setDesc('')
             setDate('')
+            setImageURL('')
             setTitle('')
         }
         setOpen(true)
@@ -35,6 +37,10 @@ function App() {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const handleImageURL = (e) => {
+        setImageURL(e.target.value)
+    }
 
     const settings = () => {
         setOpenSettings(!openSettings)
@@ -53,9 +59,10 @@ function App() {
     const saveAnnouncement = (variant, id) => {
         const obj = {
             id: uuidv4(),
+            imageURL: imageURL,
             title: title,
             desc: desc,
-            date: date
+            date: date,
         }
         const state = announcement;
         if (variant === 'edit') {
@@ -102,9 +109,11 @@ function App() {
                 title={title}
                 desc={desc}
                 date={date}
+                imageURL={imageURL}
                 handleTitle={handleTitle}
                 handleDesc={handleDesc}
                 handleDate={handleDate}
+                handleImageURL={handleImageURL}
                 save={saveAnnouncement}
                 variant={variant}
                 id={id}
@@ -120,8 +129,10 @@ function App() {
                                           title={el.title}
                                           desc={el.desc}
                                           date={el.date}
+                                          imageURL={el.imageURL}
                                           setAnnoun={setAnnoun}
                                           settings={settings}
+                                          setImageURL={setImageURL}
                                           setTitle={setTitle}
                                           setDate={setDate}
                                           setDesc={setDesc}

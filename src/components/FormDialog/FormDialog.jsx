@@ -8,7 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 
 export default function FormDialog(props) {
 
-    const {open, handleClose, title, desc, date, handleTitle, handleDesc, handleDate, save, variant} = props
+    const {open, handleClose, title, desc, date, imageURL, handleTitle, handleDesc, handleImageURL, handleDate, save, variant} = props
 
     return (
         <div>
@@ -36,6 +36,15 @@ export default function FormDialog(props) {
                         fullWidth
                         value={desc}
                         onChange={handleDesc}
+                    />
+                    <TextField
+                        margin="dense"
+                        id="imgURL"
+                        label="ImageURL"
+                        type="text"
+                        fullWidth
+                        value={imageURL}
+                        onChange={handleImageURL}
                     />
                     <TextField
                         className='my-5'
