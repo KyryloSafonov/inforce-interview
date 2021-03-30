@@ -23,6 +23,7 @@ export default function CustomizedDialogs(props) {
 
     return (
         <Dialog className="size" onClose={handleClose} aria-labelledby="customized-dialog-title" open={openMore}>
+            {obj.id}
             <DialogActions onClick={handleClose}>
                 <CloseIcon/>
             </DialogActions>
@@ -69,8 +70,6 @@ export default function CustomizedDialogs(props) {
                 {comments.map(e => <p className='commentsList'>{e}</p>)}
                 <h5>Similar Announcements</h5>
                 <div className='d-flex flex-wrap'>
-
-
                     {similar.map((item) => (
                         <OutlinedCard className='mx-2 my-2' cardVariant={'uncontrolled'} key={item.id + 'k'}
                                       title={item.title} desc={item.desc} date={item.date}/>
